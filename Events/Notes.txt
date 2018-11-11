@@ -1,0 +1,7 @@
+﻿Use event to notify subscibers when the event has taken place.
+
+This declares the event as well as the delegate when the order is saved:
+public EventHandler<ForexOrderEventArgs> OnForexOrderSave;
+
+This allows us to notify subscribers of the actual object that has been saved:
+ForexOrderEventArgs : EventArgs
