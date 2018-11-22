@@ -21,7 +21,7 @@ namespace CRTP
             Console.WriteLine("Calling derived: "+ derived.DerivedClassProperty);
 
             var copy = derived.Copy();
-
+            
             Console.WriteLine("Calling copy of derived: " + copy.DerivedClassProperty);
 
             Console.ReadLine();
