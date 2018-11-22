@@ -4,15 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{52BE2B1A-529F-4F83-B407-ED7BC1CDA91F}</ProjectGuid>
+    <ProjectGuid>{5525D38F-3593-4909-A003-A0870368A0B6}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Events</RootNamespace>
-    <AssemblyName>Events</AssemblyName>
+    <RootNamespace>CRTP</RootNamespace>
+    <AssemblyName>CRTP</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -44,18 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Services\DocumentService.cs" />
-    <Compile Include="ForexOrder.cs" />
-    <Compile Include="ForexOrderEventArgs.cs" />
-    <Compile Include="Services\MailService.cs" />
+    <Compile Include="BaseFixed.cs" />
+    <Compile Include="BaseProblematic.cs" />
+    <Compile Include="DerivedFixed.cs" />
+    <Compile Include="DerivedProblematic.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Notes.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
